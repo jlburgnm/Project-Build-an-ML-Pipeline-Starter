@@ -100,7 +100,7 @@ def go(config: DictConfig):
                     "stratify_by": config["modeling"]["stratify_by"],
                 },
             )
-            
+
 
         if "train_random_forest" in active_steps:
 
@@ -120,9 +120,12 @@ def go(config: DictConfig):
                 entry_point="main",
                 parameters={
                     "trainval_artifact": "trainval_data.csv:latest",
-                    "rf_config": rf_config,
+                    "val_size": config["modeling"]["val_size"],
                     "random_seed": config["modeling"]["random_seed"],
+                    "stratify_by": config["modeling"]["stratify_by"],
+                    "rf_config": rf_config,
                     "max_tfidf_features": config["modeling"]["max_tfidf_features"],
+                    "output_artifact": "random_forest_export",
                 },
             )
 
