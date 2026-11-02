@@ -1,3 +1,36 @@
 Links to project websites
 WANDB link - https://forge.coreweave.com/wandb/jlburgnm-western-governors-university/projects
 github link - https://github.com/jlburgnm/Project-Build-an-ML-Pipeline-Starter/releases
+
+Screenshots 
+Q6 Create a "reference" tag for the latest version of the clean_sample.csv artifact
+![Description](Jlburgnm Images/sample2 data.png)
+Shows the reference tag on the clean sample data.
+
+Q14 Optimize Hyperparameters
+![Description](Jlburgnm Images/Multi-hyperparameters.png)
+Shows > mlflow run . \
+  -P steps=train_random_forest \
+  -P hydra_options="modeling.random_forest.max_depth=10,50 modeling.random_forest.n_estimators=100,200 -m"
+in w and b.
+
+Q15 Select the best-performing model and tag it as "prod"
+![Description](Jlburgnm Images/MAE Ascending.png)
+![Description](Jlburgnm Images/prod.png)
+Shows MAE asc sort and prod tag on top MAE result.
+
+Q17 Visualize the Pipeline
+![Description](Jlburgnm Images/Lineage.png)
+Lineage graph.
+
+Q19 Run the released pipeline on a new sample of data, with initial failure
+![Description](Jlburgnm Images/failed v1.0.0.png)
+Failed snippet from terminal on v 1.0.0 run attempt.
+
+Q21 Prepare a new release
+![Description](Jlburgnm Images/Releases.png)
+Multiple releases in GitHub.
+
+Q22 Run the new release successfully
+![Description](Jlburgnm Images/sample2 data.png)
+W and B with sample2.csv data, test data, and trainval data.
